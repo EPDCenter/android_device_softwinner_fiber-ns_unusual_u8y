@@ -1,0 +1,31 @@
+diff --git a/packages/SystemUI/res/layout/status_bar.xml b/packages/SystemUI/res/layout/status_bar.xml
+index 2975201..bf20e9d 100755
+--- a/packages/SystemUI/res/layout/status_bar.xml
++++ b/packages/SystemUI/res/layout/status_bar.xml
+@@ -101,13 +101,6 @@
+                     android:layout_width="wrap_content"
+                     android:paddingLeft="4dip"
+                     />
+-                <TextView
+-                    android:id="@+id/battery_text"
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:paddingLeft="2dp"
+-                    android:singleLine="true"
+-                />
+             </LinearLayout>
+     
+             <com.android.systemui.statusbar.policy.Clock
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBar.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBar.java
+index d27c444..3bd6e0e 100755
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBar.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBar.java
+@@ -494,7 +494,7 @@ public class PhoneStatusBar extends BaseStatusBar {
+         mLocationController = new LocationController(mContext); // will post a notification
+         mBatteryController = new BatteryController(mContext);
+         mBatteryController.addIconView((ImageView)mStatusBarView.findViewById(R.id.battery));
+-        mBatteryController.addLabelView((TextView)mStatusBarView.findViewById(R.id.battery_text));
++        //mBatteryController.addLabelView((TextView)mStatusBarView.findViewById(R.id.battery_text));
+         mNetworkController = new NetworkController(mContext);
+         mBluetoothController = new BluetoothController(mContext);
+         final SignalClusterView signalCluster =

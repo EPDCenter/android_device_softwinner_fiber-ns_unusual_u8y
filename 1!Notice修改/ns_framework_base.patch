@@ -1,0 +1,13 @@
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBar.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBar.java
+index fc9e0e8..431bbac 100755
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBar.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBar.java
+@@ -531,7 +531,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
+         // Other icons
+         mLocationController = new LocationController(mContext); // will post a notification
+         mBatteryController = new BatteryController(mContext);
+-//        mBatteryController.addLabelView((TextView)mStatusBarView.findViewById(R.id.battery_text));
++        mBatteryController.addLabelView((TextView)mStatusBarView.findViewById(R.id.battery_text));
+         mNetworkController = new NetworkController(mContext);
+         mBluetoothController = new BluetoothController(mContext);
+         mRotationLockController = new RotationLockController(mContext);
